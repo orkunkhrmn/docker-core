@@ -18,6 +18,6 @@ docker exec -it <id> //bin//sh "connect to container on shell"
 ---
 
 docker-compose build
-docker-compose up
+docker-compose up -d
 
 docker compose ile ayağa kaldrıldığında dockerfile lar dizin dışında gibi path vermek gerekiyor
