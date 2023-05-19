@@ -4,7 +4,8 @@ WORKDIR /app
 
 EXPOSE 80
 
-COPY . .
+#docker-compose ile build edildiği için böyle. eğer docker ile build edilecekse . . yazılmalı
+COPY ./docker-app . 
 RUN npm install
 RUN npm run build --prod
 #stage 2
