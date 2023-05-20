@@ -1,14 +1,29 @@
-version: "3.7"
+version: "3.9"
 services:
   webapp:
+    container_name: client-app
     build:
       context: ./docker-app
       dockerfile: ./Dockerfile
     ports:
       - "80:80"
   serverapp:
+    container_name: server-app
     build:
       context: ./Api
       dockerfile: ./Dockerfile
     ports:
       - "8080:80"
+  java_db:
+    container_name: java_db
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata: {}
