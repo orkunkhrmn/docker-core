@@ -18,4 +18,5 @@ docker exec -it <id> //bin//sh "connect to container on shell"
 ---
 
 docker-compose build
-docker-compose up -d
+docker-compose up -d "tüm serviceler ayağa kaldırır" ağer "service_name verirse" sadece o service ayağa kalkar
+
