@@ -2,13 +2,13 @@ version: "3.7"
 services:
   webapp:
     build:
-      context: .
-      dockerfile: ./docker-app/Dockerfile
+      context: ./docker-app
+      dockerfile: ./Dockerfile
     ports:
       - "80:80"
   serverapp:
     build:
-      context: .
-      dockerfile: ./Api/Dockerfile
+      context: ./Api
+      dockerfile: ./Dockerfile
     ports:
       - "8080:80"
